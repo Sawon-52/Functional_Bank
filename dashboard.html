@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <section class="w-4/5 min-h-screen mx-auto bg-blue-300 mt-4 p-5 rounded-lg grid place-content-center">
+    <div class="text-center">
+      <h2 class="text-5xl font-bold text-blue-500 ">Let's get Some <span class="font-extrabold text-blue-800">Mooooooney</span>!!</h2>
+    </div>
+    <!-- cart section -->
+    <div class="my-10 grid md:grid-cols-1 lg:grid-cols-3 gap-4">
+      <!-- deposite -->
+      <div class="bg-emerald-600 h-32 text-left px-10 flex  flex-col justify-center rounded-xl">
+        <h3 class="text-3xl font-bold text-white ">Deposite</h3>
+        <h3 class="text-2xl  text-white" >$<span id="deposite-amount" >00</span></h3>
+      </div>
+      <!-- Withdraw -->
+      <div class="bg-pink-400 h-32 text-left px-10 flex  flex-col justify-center rounded-xl">
+        <h3 class="text-3xl font-bold text-white ">Withdraw</h3>
+        <h3 class="text-2xl  text-white" >$<span id="withdrow-amount" >00</span></h3>
+      </div>
+      <!-- Balance -->
+      <div class=" bg-red-600 h-32 text-left px-10 flex  flex-col justify-center rounded-xl">
+        <h3 class="text-3xl font-bold text-white ">Balance</h3>
+        <h3 class="text-2xl  text-white" >$<span id="balance-total" >00</span></h3>
+      </div>
+
+    </div>
+
+   <!-- control box -->
+    <div class="mt-4 grid lg:grid-cols-2 gap-4">
+      <div class="bg-indigo-400 h-48 text-left px-12 flex  flex-col rounded-xl pt-5">
+        <h3 class="text-3xl font-bold text-white ">Please Deposite</h3>
+        <input id="deposite-form" class="my-4 h-8 outline-1 px-3 rounded-md ml-10"  type="text" placeholder="$ amount you want to deposite">
+        <button class="bg-emerald-700 text-white w-32 rounded-md h-10 ml-10" id="deposite-btn">Deposite</button>
+      </div>
+
+      <!-- for withdrow control box-->
+      <div class="bg-violet-400 h-48 text-left px-12 flex  flex-col rounded-xl pt-5">
+        <h3 class="text-3xl font-bold text-white ">Please Withdraw</h3>
+        <input id="withdrow-form" class="my-4 h-8 outline-1 px-3 rounded-md ml-10" type="text" placeholder="$ amount you want to withdrow">
+        <button id="withdrow-btn" class="bg-pink-700 text-white w-32 rounded-md h-10 ml-10" >Withdrow</button>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
