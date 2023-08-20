@@ -18,9 +18,6 @@ function setTotalValue(position, newValue){
     textPosition.innerText = newValue;
 }
 
-
-
-
 document.getElementById('deposite-btn').addEventListener('click', function(){
 
     // take diposite value and call function to process it
@@ -35,6 +32,18 @@ document.getElementById('deposite-btn').addEventListener('click', function(){
     // console.log(totalDiposite);
 
     // set the new ammount in deposite field
-
     const displayDiposite = setTotalValue('deposite-amount',totalDiposite);
+
+
+    // add blance 
+    const previousBalance = getTextValue('balance-total');
+    // calculate total Balanch
+    const totalBalance = previousBalance + newDipositeValue;
+
+    // set balanced
+
+    const displayBalance = setTotalValue('balance-total',totalBalance);
+
+
+     
 })
