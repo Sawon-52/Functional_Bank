@@ -41,9 +41,35 @@ document.getElementById('deposite-btn').addEventListener('click', function(){
     const totalBalance = previousBalance + newDipositeValue;
 
     // set balanced
-
     const displayBalance = setTotalValue('balance-total',totalBalance);
 
-
-     
 })
+
+document.getElementById('withdrow-btn').addEventListener('click', function(){
+
+    // take withdrow value and call function to process it
+    const newWithdrowValue = getInputValue('withdrow-form');
+    // console.log(newDipositeValue);
+
+    const previousWithdrowValue = getTextValue('withdrow-amount');
+    // console.log(previousDipositeValue);
+    
+    // total withdrow amount
+    const totalWithdrow = previousWithdrowValue + newWithdrowValue;
+    // console.log(totalDiposite);
+
+    // set the new ammount in withdrow field
+    const displayWithdrow = setTotalValue('withdrow-amount', totalWithdrow);
+
+
+    // Now blance 
+    const previousBalance = getTextValue('balance-total');
+
+    // calculate total Balanch
+    const totalBalencedAfterwithdrow = previousBalance - newWithdrowValue;
+
+    // set balanced
+    const displayBalance = setTotalValue('balance-total',totalBalencedAfterwithdrow);
+
+})
+
